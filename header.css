@@ -1,0 +1,93 @@
+@font-face {
+  font-family: Montserrat;
+  src: url("/font/Montserrat/Montserrat-Italic-VariableFont_wght.ttf");
+}
+body * {
+  font-family: Montserrat;
+}
+header .menu {
+  display: none;
+}
+header .logo {
+  width: 90px;
+  display: flex;
+}
+header .logo a {
+  color: #000;
+  text-decoration: none;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
+header nav {
+  display: block;
+  font-weight: bold;
+}
+header nav a {
+  color: #000000 !important;
+  font-size: 18px;
+  opacity: 0.8;
+  transition: 0.5s;
+}
+header nav a:hover {
+  opacity: 1;
+  transition: 0.5s;
+}
+header nav a.active {
+  opacity: 1;
+}
+header .drawer {
+  display: none;
+}
+@media (max-width: 880px) {
+  header .menu {
+    display: block;
+    margin-left: auto;
+  }
+  header nav {
+    display: none;
+  }
+  header {
+    align-items: center;
+  }
+  header .drawer {
+    display: block;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    background-color: #000000;
+    z-index: 3;
+    transition: 0.5s;
+  }
+  header .drawer.active {
+    left: 0;
+    transition: 0.5s;
+  }
+  header a {
+    color: #000;
+  }
+  header .drawer ul {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  header .drawer ul li a {
+    font-size: 48px;
+    font-weight: bold;
+    color: #fff !important;
+  }
+  header .drawer .close {
+    position: fixed;
+    right: 15px;
+    top: 15px;
+    display: none;
+  }
+  header .drawer.active .close {
+    display: block;
+  }
+}
