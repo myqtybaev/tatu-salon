@@ -1,0 +1,46 @@
+.artists .artist-body .img {
+  width: 400px;
+  transform: scaleY(0);
+  position: absolute;
+  top: 40px;
+  right: 25%;
+  transition: 0.5s;
+}
+.artists .artist-body:hover .img {
+  transition: 0.5s;
+  transform: scaleY(1);
+}
+.artists .artist {
+  width: 100%;
+  color: #000;
+  font-size: 72px;
+  border-radius: 10px;
+  padding: 5px;
+  display: block;
+  position: relative;
+  padding-left: 20px;
+  overflow: hidden;
+}
+.artists .artist .background-overlay {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  transition: top 0.5s;
+  z-index: -1;
+}
+.artists .artist:hover {
+  color: #fff;
+}
+.artists .artist:hover .background-overlay {
+  top: 0;
+}
+.artists .artist .num {
+  position: absolute;
+  top: 30%;
+  left: 5px;
+  color: #000;
+  font-size: 12px;
+}

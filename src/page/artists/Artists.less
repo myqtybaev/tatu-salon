@@ -1,0 +1,83 @@
+// .artists {
+//   .artist {
+//     width: 100%;
+//     background-color: #fff;
+//     color: #000;
+//     font-size: 72px;
+//     border-radius: 10px;
+//     padding: 5px;
+//     display: block;
+//     position: relative;
+//     padding-left: 20px;
+//     transform: translateY(100%); /* Сдвигаем элемент вниз на 100% */
+//     transition: transform 0.5s; /* Добавляем плавную анимацию к свойству transform */
+//     overflow: hidden;
+//     &:hover {
+//       color: #fff;
+//       background-color: #000;
+//       transform: translateY(0%); /* Сдвигаем элемент вверх на 0% */
+//     }
+//     .num {
+//       position: absolute;
+//       top: 30%;
+//       left: 5px;
+//       color: #fff;
+//       font-size: 12px;
+//     }
+//   }
+// }
+
+.artists {
+  .artist-body {
+    .img {
+      width: 400px;
+      transform: scaleY(0);
+      position: absolute;
+      top: 40px;
+      right: 25%;
+      transition: 0.5s;
+    }
+    &:hover .img {
+      transition: 0.5s;
+      transform: scaleY(1);
+    }
+  }
+  .artist {
+    width: 100%;
+    color: #000;
+    font-size: 72px;
+    border-radius: 10px;
+    padding: 5px;
+    display: block;
+    position: relative;
+    padding-left: 20px;
+    overflow: hidden;
+
+    .background-overlay {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #000;
+      transition: top 0.5s;
+      z-index: -1;
+    }
+
+    &:hover {
+      .background-overlay {
+        top: 0;
+      }
+
+      color: #fff;
+    }
+
+    .num {
+      position: absolute;
+      top: 30%;
+      left: 5px;
+      color: #000;
+      font-size: 12px;
+    }
+  }
+}
